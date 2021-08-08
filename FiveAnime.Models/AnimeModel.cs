@@ -37,7 +37,7 @@ namespace FiveAnime.Models
         [MinLength(3)]
         public string Season { get; set; }
         [Required]
-        public DateTime Year { get; set; }
+        public int Year { get; set; }
         [Required]
         public bool IsCompleted { get; set; }
         [Required]

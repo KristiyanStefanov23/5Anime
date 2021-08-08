@@ -23,7 +23,7 @@ namespace FiveAnime.Controllers
 
         public IActionResult Index()
         {
-            var animeList = businessLogic.FetchAllRecentAnime();
+            var animeList = businessLogic.FetchAllAnime();
 
             return View(animeList);
         }

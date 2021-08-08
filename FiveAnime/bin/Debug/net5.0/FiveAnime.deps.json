@@ -2086,6 +2086,7 @@
       },
       "FiveAnime.Models/1.0.0": {
         "dependencies": {
+          "CloudinaryDotNet": "1.15.2",
           "FiveAnime.Data": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.6"
         },

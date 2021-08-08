@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0fjgIyrVI/AGRlVYVp+rwAVPQPyzj1+XwOAQz0wrcHu9SVdoHV+9R0TNw+bddMAaFXuT+OorhICflDFQwcopHQ==",
+  "dgSpecHash": "15/4tbAuz/ECwo4hMRu8+sxRQA7owa1Ip0BH1R17LRID3r+9a+/Qzf8Fsg4sfXuqoQ22EZWDLmMOzm2bX5Cn8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime\\FiveAnime.csproj",
+  "projectFilePath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime\\FiveAnime.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kings\\.nuget\\packages\\cloudinarydotnet\\1.15.2\\cloudinarydotnet.1.15.2.nupkg.sha512",
     "C:\\Users\\Kings\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

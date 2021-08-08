@@ -1,12 +1,33 @@
-﻿
+﻿@using FiveAnime.Data.Models
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Administration</h1>
+<style>
+    .Admin-operations ul {
+        list-style-type: none;
+        padding: 0;
+    }
 
-<ul>
-    <li><a asp-action="CreateAnime" asp-controller="Administration">New Anime</a></li>
-    <li><a asp-action="" asp-controller="">New Episode</a></li>
-    <li><a asp-action="" asp-controller="">New Filter</a></li>
-</ul>
+    .Admin-operations li a{
+        color: #FFF;
+        font-size: 1.3rem;
+    }
+</style>
+
+<h1 class="text-center">Administration</h1>
+
+<div class="Admin-operations row m-auto">
+    <ul class="col-6 text-center">
+        <li><h2>Create/Upload</h2></li>
+        <li><a asp-action="Create" asp-controller="Administration">Anime</a></li>
+        <li><a asp-action="Create" asp-controller="Administration">Episode</a></li>
+        <li><a asp-action="Create" asp-controller="Administration">Filter</a></li>
+    </ul>
+    <ul class="col-6 text-center">
+        <li><h2>Manage</h2></li>
+        <li><a asp-action="Manage" asp-controller="Administration">Anime</a></li>
+        <li><a asp-action="Manage" asp-controller="Administration">Episode</a></li>
+        <li><a asp-action="Manage" asp-controller="Administration">Filter</a></li>
+    </ul>
+</div>

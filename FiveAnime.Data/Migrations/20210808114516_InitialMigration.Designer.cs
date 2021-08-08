@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FiveAnime.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210808105938_InitialMigration")]
+    [Migration("20210808114516_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,8 +78,8 @@ namespace FiveAnime.Data.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<DateTime>("Year")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

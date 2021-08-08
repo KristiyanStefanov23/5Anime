@@ -19,7 +19,7 @@ namespace FiveAnime.Data.Migrations
                     Type = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Studio = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Season = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Year = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Year = table.Column<int>(type: "int", nullable: false),
                     IsCompleted = table.Column<bool>(type: "bit", nullable: false),
                     IsDubbed = table.Column<bool>(type: "bit", nullable: false)
                 },

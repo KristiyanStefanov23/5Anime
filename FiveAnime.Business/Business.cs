@@ -17,7 +17,7 @@ namespace FiveAnime.Business
             dbContext.SaveChanges();
         }
 
-        public List<Anime> FetchAllRecentAnime()
+        public List<Anime> FetchAllAnime()
         {
             return dbContext.Animes.OrderBy(x => x.Year).ToList();
         }

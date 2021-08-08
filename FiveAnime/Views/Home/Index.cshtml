@@ -3,14 +3,16 @@
 }
 @model List<FiveAnime.Data.Models.Anime>
 
-<div class="row">
-    <h2 class="text-white-50">Newly Uploaded:</h2><br />
-    @foreach (var anime in Model)
-    {
-        <div class="text-white-50 col-3 flex-column text-center">
-            <img style="width: 70%" src="@anime.CoverImageUrl" />
-            <div class="text-break cut-text">@anime.Title</div>
-            <div>@anime.</div>
-        </div>
-    }
+<h2 class="text-white-50">Newly Uploaded:</h2>
+<div class="card-holder">
+    <div class="row card-holder-category">
+        @foreach (var anime in Model)
+        {
+            <div class="text-white-50 col-2 text-center">
+                <img style="width: 100%" src="@anime.CoverImageUrl" />
+                <div class="text-break cut-text">@anime.Title</div>
+                <div>@anime.Year</div>
+            </div>
+        }
+    </div>
 </div>

@@ -10,9 +10,9 @@ namespace FiveAnime.Controllers
     public class AdministrationController : Controller
     {
         private Business.Business businessLogic;
-        private readonly CloudinaryService cloudinaryService;
+        private readonly ICloudinaryService cloudinaryService;
 
-        public AdministrationController(Business.Business businessLogic, CloudinaryService cloudinaryService)
+        public AdministrationController(Business.Business businessLogic, ICloudinaryService cloudinaryService)
         {
             this.businessLogic = businessLogic;
             this.cloudinaryService = cloudinaryService;
@@ -23,7 +23,14 @@ namespace FiveAnime.Controllers
             return View();
         }
 
-        public IActionResult CreateAnime()
+        public IActionResult OperationList()
+        {
+            return View();
+        }
+
+        #region CreateOperation
+
+        public IActionResult Create()
         {
             return View();
         }
@@ -51,5 +58,26 @@ namespace FiveAnime.Controllers
 
             return RedirectToAction(nameof(HomeController.Index));
         }
+
+        public IActionResult CreateEpisode()
+        {
+            return View();
+        }
+
+        public IActionResult CreateFilter()
+        {
+            return View();
+        }
+
+        #endregion
+
+        #region EditOperation
+
+        public IActionResult Manage()
+        {
+            return View();
+        }
+
+        #endregion
     }
 }

@@ -5738,11 +5738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj",
+      "projectUniqueName": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj",
       "projectName": "FiveAnime.Data",
-      "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj",
+      "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj",
       "packagesPath": "C:\\Users\\Kings\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\obj\\",
+      "outputPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kings\\AppData\\Roaming\\NuGet\\NuGet.Config",

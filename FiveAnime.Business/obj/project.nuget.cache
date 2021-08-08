@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VlXBaReT0p1N40S3S87vJGn7PofI3YGqcNNk0PBDQAzEWeUKI63Q9oQ2aRUugTV1ccWdfrsopTfgtxaEt3DHNQ==",
+  "dgSpecHash": "3BLh9mGakOn19FL1V8I18BhBTkSqgkz0auZnL3IDRiV/IjTJROX5GW1GHT5kctGHYy7C7krxVbCLxlxwSkcgww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Business\\FiveAnime.Business.csproj",
+  "projectFilePath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Business\\FiveAnime.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kings\\.nuget\\packages\\cloudinarydotnet\\1.15.2\\cloudinarydotnet.1.15.2.nupkg.sha512",
     "C:\\Users\\Kings\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.6\\microsoft.aspnetcore.cryptography.internal.5.0.6.nupkg.sha512",

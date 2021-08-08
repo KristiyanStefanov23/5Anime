@@ -2283,6 +2283,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "CloudinaryDotNet": "1.15.2",
           "FiveAnime.Data": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.6"
         },
@@ -7820,11 +7821,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime\\FiveAnime.csproj",
+      "projectUniqueName": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime\\FiveAnime.csproj",
       "projectName": "FiveAnime",
-      "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime\\FiveAnime.csproj",
+      "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime\\FiveAnime.csproj",
       "packagesPath": "C:\\Users\\Kings\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime\\obj\\",
+      "outputPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kings\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7841,14 +7842,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Business\\FiveAnime.Business.csproj": {
-              "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Business\\FiveAnime.Business.csproj"
+            "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Business\\FiveAnime.Business.csproj": {
+              "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Business\\FiveAnime.Business.csproj"
             },
-            "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj": {
-              "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj"
+            "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj": {
+              "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj"
             },
-            "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Models\\FiveAnime.Models.csproj": {
-              "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Models\\FiveAnime.Models.csproj"
+            "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Models\\FiveAnime.Models.csproj": {
+              "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Models\\FiveAnime.Models.csproj"
             }
           }
         }

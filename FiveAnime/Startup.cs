@@ -26,9 +26,9 @@ namespace FiveAnime
         public void ConfigureServices(IServiceCollection services)
         {
             Account account = new Account(
-                this.Configuration["Cloudinary:CloudName"],
-                this.Configuration["Cloudinary:ApiKey"],
-                this.Configuration["Cloudinary:ApiSecret"]
+                Configuration["Cloudinary:CloudName"],
+                Configuration["Cloudinary:ApiKey"],
+                Configuration["Cloudinary:ApiSecret"]
             );
 
             Cloudinary cloudinary = new Cloudinary(account);

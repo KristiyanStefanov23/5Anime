@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime\\FiveAnime.csproj": {}
+    "D:\\Programming\\Softuni\\C#-Web\\FiveAnime\\FiveAnime.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Business\\FiveAnime.Business.csproj": {
+    "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Business\\FiveAnime.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Business\\FiveAnime.Business.csproj",
+        "projectUniqueName": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Business\\FiveAnime.Business.csproj",
         "projectName": "FiveAnime.Business",
-        "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Business\\FiveAnime.Business.csproj",
+        "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Business\\FiveAnime.Business.csproj",
         "packagesPath": "C:\\Users\\Kings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Business\\obj\\",
+        "outputPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kings\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj": {
-                "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj"
+              "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj": {
+                "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj": {
+    "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj",
+        "projectUniqueName": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj",
         "projectName": "FiveAnime.Data",
-        "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj",
+        "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj",
         "packagesPath": "C:\\Users\\Kings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\obj\\",
+        "outputPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kings\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -146,14 +146,14 @@
         }
       }
     },
-    "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Models\\FiveAnime.Models.csproj": {
+    "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Models\\FiveAnime.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Models\\FiveAnime.Models.csproj",
+        "projectUniqueName": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Models\\FiveAnime.Models.csproj",
         "projectName": "FiveAnime.Models",
-        "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Models\\FiveAnime.Models.csproj",
+        "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Models\\FiveAnime.Models.csproj",
         "packagesPath": "C:\\Users\\Kings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Models\\obj\\",
+        "outputPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kings\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -170,8 +170,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj": {
-                "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj"
+              "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj": {
+                "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj"
               }
             }
           }
@@ -186,6 +186,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.15.2, )"
+            },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.6, )"
@@ -210,14 +214,14 @@
         }
       }
     },
-    "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime\\FiveAnime.csproj": {
+    "D:\\Programming\\Softuni\\C#-Web\\FiveAnime\\FiveAnime.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime\\FiveAnime.csproj",
+        "projectUniqueName": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime\\FiveAnime.csproj",
         "projectName": "FiveAnime",
-        "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime\\FiveAnime.csproj",
+        "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime\\FiveAnime.csproj",
         "packagesPath": "C:\\Users\\Kings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime\\obj\\",
+        "outputPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kings\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -234,14 +238,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Business\\FiveAnime.Business.csproj": {
-                "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Business\\FiveAnime.Business.csproj"
+              "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Business\\FiveAnime.Business.csproj": {
+                "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Business\\FiveAnime.Business.csproj"
               },
-              "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj": {
-                "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Data\\FiveAnime.Data.csproj"
+              "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj": {
+                "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Data\\FiveAnime.Data.csproj"
               },
-              "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Models\\FiveAnime.Models.csproj": {
-                "projectPath": "C:\\Users\\Kings\\source\\repos\\FiveAnime\\FiveAnime.Models\\FiveAnime.Models.csproj"
+              "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Models\\FiveAnime.Models.csproj": {
+                "projectPath": "D:\\Programming\\Softuni\\C#-Web\\FiveAnime.Models\\FiveAnime.Models.csproj"
               }
             }
           }
