@@ -893,3 +893,12 @@ D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\ref\FiveAnime.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.pdb
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.genruntimeconfig.cache
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\CreateEpisode.cshtml.g.cs
+D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\CreateFilter.cshtml.g.cs
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Mvc.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Razor.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Helpers.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Anime\Anime.cshtml.g.cs

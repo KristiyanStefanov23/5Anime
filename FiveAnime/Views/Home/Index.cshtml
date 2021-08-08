@@ -8,7 +8,7 @@
     <div class="row card-holder-category">
         @foreach (var anime in Model)
         {
-            <div class="text-white-50 col-2 text-center">
+            <div id="@anime.Id" onclick="location.href='@Url.Action("Anime", "Anime")?id=@anime.Id'" class="text-white-50 col-2 text-center">
                 <img style="width: 100%" src="@anime.CoverImageUrl" />
                 <div class="text-break cut-text">@anime.Title</div>
                 <div>@anime.Year</div>

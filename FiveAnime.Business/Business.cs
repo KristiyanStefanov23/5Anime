@@ -23,6 +23,17 @@ namespace FiveAnime.Business
             dbContext.SaveChanges();
         }
 
+        public List<KeyValuePair<int, string>> GetAllAnimesKVP() {
+            var anime = new List<KeyValuePair<int, string>>();
+            foreach (var animeFromDb in dbContext.Animes.OrderBy(x => x.Id))
+            {
+                var animeToAdd = new KeyValuePair<int, string>(animeFromDb.Id, animeFromDb.Title);
+                anime.Add(animeToAdd);
+            }
+
+            return anime;
+        }
+
         public List<Anime> FetchAllAnime()
         {
             return dbContext.Animes.OrderBy(x => x.Year).ToList();

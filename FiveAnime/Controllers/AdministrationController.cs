@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using FiveAnime.Business.CloudinaryData;
 using FiveAnime.Models;
+using System.Linq;
 
 namespace FiveAnime.Controllers
 {
@@ -30,7 +31,7 @@ namespace FiveAnime.Controllers
 
         #region CreateOperation
 
-        public IActionResult Create()
+        public IActionResult CreateAnime()
         {
             return View();
         }
@@ -39,6 +40,7 @@ namespace FiveAnime.Controllers
         public IActionResult CreateAnime(AnimeModel anime)
         {
             if (!ModelState.IsValid) return View(anime);
+
             var imageUrl = cloudinaryService.Image(anime.CoverImage, "AnimeCoverImages");
             var animeToUpload = new Anime()
             {
@@ -58,18 +60,48 @@ namespace FiveAnime.Controllers
 
             return RedirectToAction(nameof(HomeController.Index));
         }
+        public IActionResult CreateEpisode()
+        {
+            ViewBag.AnimeList = businessLogic.GetAllAnimesKVP();
+
+            return View();
+        }
 
         [HttpPost]
-        public IActionResult CreateEpisode(Episode episode)
+        public IActionResult CreateEpisode(EpisodeModel episode)
         {
+            ViewBag.AnimeList = businessLogic.GetAllAnimesKVP();
             if (!ModelState.IsValid) return View(episode);
+
             var videoUrl = cloudinaryService.Video(episode.EpisodeVideo, "AnimeVideos");
+            var videoToUpload = new Episode()
+            {
+                EpisodeVideoUrl = videoUrl,
+                FromAnime = businessLogic.FetchAllAnime().Where(x => x.Id == episode.AnimeId).FirstOrDefault(),
+                AnimeId = episode.AnimeId,
+                PublishDate = System.DateTime.UtcNow
+            };
+            businessLogic.UploadEpisode(videoToUpload);
+
+            return RedirectToAction(nameof(HomeController.Index));
+        }
+
+        public IActionResult CreateFilter()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateFilter(FilterModel filter)
+        {
+            if (!ModelState.IsValid) return View(filter);
+
             return RedirectToAction(nameof(HomeController.Index));
         }
 
         #endregion
 
-        #region EditOperation
+        #region ManageOperation
 
         public IActionResult Manage()
         {

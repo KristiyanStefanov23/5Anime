@@ -31,7 +31,7 @@ namespace FiveAnime.Business.CloudinaryData
                     File = new FileDescription($"{DateTime.UtcNow} - {file.Name}", memoryStream),
                 };
 
-                uploadResult = this.cloudinary.Upload(uploadParams);
+                uploadResult = cloudinary.Upload(uploadParams);
             }
 
             return uploadResult?.SecureUri.AbsoluteUri;
@@ -39,7 +39,27 @@ namespace FiveAnime.Business.CloudinaryData
 
         public string Video(IFormFile file, string folder)
         {
-            throw new NotImplementedException();
+            byte[] fileBytes;
+            UploadResult uploadResult = null;
+
+            using (var memoryStream = new MemoryStream())
+            {
+                file.CopyTo(memoryStream);
+                fileBytes = memoryStream.ToArray();
+            }
+
+            using (var memoryStream = new MemoryStream(fileBytes))
+            {
+                RawUploadParams uploadParams = new RawUploadParams
+                {
+                    Folder = folder,
+                    File = new FileDescription($"{DateTime.UtcNow} - {file.Name}", memoryStream)
+                };
+
+                uploadResult = cloudinary.Upload(uploadParams);
+            }
+
+            return uploadResult?.SecureUrl.AbsoluteUri;
         }
     }
 }
