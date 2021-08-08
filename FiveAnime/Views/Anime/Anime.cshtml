@@ -1,8 +1,93 @@
-﻿@model int 
+﻿@using System.Linq
+@using FiveAnime.Data.Models
+
+@model KeyValuePair<Anime, List<Episode>>
 
 @{
     ViewData["Title"] = "Anime";
 }
 
-<h1>Anime</h1>
+<style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
 
+    li {
+        margin: 0 10px;
+    }
+
+    .text-light {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .episode-btn:hover {
+        background: #2b2e30;
+        cursor: pointer;
+    }
+
+    .episode-btn {
+        width: 5%;
+        padding: 7px;
+        background: #221f1f;
+        color: #747474;
+    }
+</style>
+
+<div class="anime-showcase-page-wrapper row">
+    <div class="col-3">
+        <img class="w-100" src="@Model.Key.CoverImageUrl" />
+        <ul>
+            <li class="text-white-50">Type</li>
+            <li class="text-light">@Model.Key.Type</li>
+            <li class="text-white-50">Studio</li>
+            <li class="text-light">@Model.Key.Studio</li>
+            <li class="text-white-50">Release Date (JP)</li>
+            <li class="text-light">@Model.Key.Season, @Model.Key.Year</li>
+            <li class="text-white-50">Status</li>
+            @if (Model.Key.IsCompleted)
+            {
+                <li class="text-light">Completed</li>
+            }
+            else
+            {
+                <li class="text-light">Currently Airing</li>
+            }
+            <li class="text-white-50">Language</li>
+            @if (Model.Key.IsDubbed)
+            {
+                <li class="text-light">Dubbed</li>
+            }
+            else
+            {
+                <li class="text-light">Subbed</li>
+            }
+        </ul>
+    </div>
+    <div class="col">
+        <h1 class="m-5">@Model.Key.Title</h1>
+        <h5>Filters</h5>
+        <hr class="bg-white" />
+        <p class="text-white-50">@Model.Key.Description</p>
+        <div>
+            @if (!Model.Value.Any())
+            {
+                <h5 class="ml-4 text-white-50">No episodes uploaded yet...</h5>
+            }
+            else
+                for (int i = 1; i <= Model.Value.Count(); i++)
+                {
+                    <div class="episode-btn badge badge-secondary">
+                        @if (i <= 9)
+                        {
+                            <span>0</span><span>@i</span>
+                        }
+                        else
+                        {
+                            <span>@i</span>
+                        }
+                    </div>
+                }
+        </div>
+    </div>
+</div>

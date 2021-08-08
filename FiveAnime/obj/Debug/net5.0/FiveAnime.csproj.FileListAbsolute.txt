@@ -731,6 +731,12 @@ D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\FiveAnime.Views.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\FiveAnime.Views.pdb
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\CloudinaryDotNet.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Humanizer.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Mvc.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Razor.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Helpers.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
@@ -774,6 +780,7 @@ D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.VisualStudio.
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Composition.AttributedModel.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Composition.Convention.dll
@@ -875,7 +882,10 @@ D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.TagHelpers.ou
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.RazorCoreGenerate.cache
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\CreateAnime.cshtml.g.cs
+D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\CreateEpisode.cshtml.g.cs
+D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\CreateFilter.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\Index.cshtml.g.cs
+D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Anime\Anime.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
@@ -892,13 +902,3 @@ D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\ref\FiveAnime.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.pdb
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.genruntimeconfig.cache
-D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\CreateEpisode.cshtml.g.cs
-D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\CreateFilter.cshtml.g.cs
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Mvc.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Razor.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Helpers.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Anime\Anime.cshtml.g.cs

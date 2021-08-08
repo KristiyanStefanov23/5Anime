@@ -19,7 +19,6 @@ D:\Programming\Softuni\C#-Web\FiveAnime.Data\bin\Debug\net5.0\FiveAnime.Data.run
 D:\Programming\Softuni\C#-Web\FiveAnime.Data\bin\Debug\net5.0\FiveAnime.Data.dll
 D:\Programming\Softuni\C#-Web\FiveAnime.Data\bin\Debug\net5.0\ref\FiveAnime.Data.dll
 D:\Programming\Softuni\C#-Web\FiveAnime.Data\bin\Debug\net5.0\FiveAnime.Data.pdb
-D:\Programming\Softuni\C#-Web\FiveAnime.Data\obj\Debug\net5.0\FiveAnime.Data.csproj.AssemblyReference.cache
 D:\Programming\Softuni\C#-Web\FiveAnime.Data\obj\Debug\net5.0\FiveAnime.Data.GeneratedMSBuildEditorConfig.editorconfig
 D:\Programming\Softuni\C#-Web\FiveAnime.Data\obj\Debug\net5.0\FiveAnime.Data.AssemblyInfoInputs.cache
 D:\Programming\Softuni\C#-Web\FiveAnime.Data\obj\Debug\net5.0\FiveAnime.Data.AssemblyInfo.cs
