@@ -36,5 +36,10 @@ namespace FiveAnime.Business.CloudinaryData
 
             return uploadResult?.SecureUri.AbsoluteUri;
         }
+
+        public string Video(IFormFile file, string folder)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

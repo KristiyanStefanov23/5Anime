@@ -892,3 +892,4 @@ D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\ref\FiveAnime.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.pdb
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\FiveAnime.genruntimeconfig.cache
+D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\CreateEpisode.cshtml.g.cs

@@ -17,6 +17,12 @@ namespace FiveAnime.Business
             dbContext.SaveChanges();
         }
 
+        public void UploadEpisode(Episode episode)
+        {
+            dbContext.Episodes.Add(episode);
+            dbContext.SaveChanges();
+        }
+
         public List<Anime> FetchAllAnime()
         {
             return dbContext.Animes.OrderBy(x => x.Year).ToList();

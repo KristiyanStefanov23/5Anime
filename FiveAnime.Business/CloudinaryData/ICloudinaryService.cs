@@ -10,5 +10,6 @@ namespace FiveAnime.Business.CloudinaryData
     public interface ICloudinaryService
     {
         public string Image(IFormFile file, string folder);
+        public string Video(IFormFile file, string folder);
     }
 }

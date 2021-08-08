@@ -59,14 +59,12 @@ namespace FiveAnime.Controllers
             return RedirectToAction(nameof(HomeController.Index));
         }
 
-        public IActionResult CreateEpisode()
+        [HttpPost]
+        public IActionResult CreateEpisode(Episode episode)
         {
-            return View();
-        }
-
-        public IActionResult CreateFilter()
-        {
-            return View();
+            if (!ModelState.IsValid) return View(episode);
+            var videoUrl = cloudinaryService.Video(episode.EpisodeVideo, "AnimeVideos");
+            return RedirectToAction(nameof(HomeController.Index));
         }
 
         #endregion
