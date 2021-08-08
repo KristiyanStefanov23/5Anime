@@ -1,0 +1,15 @@
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\bin\Debug\net5.0\FiveAnime.Modules.deps.json
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\bin\Debug\net5.0\FiveAnime.Modules.dll
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\bin\Debug\net5.0\ref\FiveAnime.Modules.dll
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\bin\Debug\net5.0\FiveAnime.Modules.pdb
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\obj\Debug\net5.0\FiveAnime.Modules.csproj.AssemblyReference.cache
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\obj\Debug\net5.0\FiveAnime.Modules.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\obj\Debug\net5.0\FiveAnime.Modules.AssemblyInfoInputs.cache
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\obj\Debug\net5.0\FiveAnime.Modules.AssemblyInfo.cs
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\obj\Debug\net5.0\FiveAnime.Modules.csproj.CoreCompileInputs.cache
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\obj\Debug\net5.0\FiveAnime.Modules.dll
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\obj\Debug\net5.0\ref\FiveAnime.Modules.dll
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\obj\Debug\net5.0\FiveAnime.Modules.pdb
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\bin\Debug\net5.0\FiveAnime.Data.dll
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\bin\Debug\net5.0\FiveAnime.Data.pdb
+C:\Users\Kings\source\repos\FiveAnime\FiveAnime.Modules\obj\Debug\net5.0\FiveAnime.Modules.csproj.CopyComplete
