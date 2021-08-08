@@ -39,10 +39,9 @@ namespace FiveAnime.Business
             return dbContext.Animes.OrderBy(x => x.Year).ToList();
         }
 
-        public List<Episode> AnimeEpisodes(Anime anime)
+        public List<Episode> AnimeEpisodes(int animeId)
         {
-            var episodes = dbContext.Episodes.Where(x => x.FromAnime.Id == anime.Id).ToList();
-
+            var episodes = dbContext.Episodes.Where(x => x.FromAnime.Id == animeId).ToList();
 
             return episodes;
         }

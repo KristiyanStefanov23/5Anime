@@ -4,17 +4,14 @@
 @model KeyValuePair<Anime, List<Episode>>
 
 @{
-    ViewData["Title"] = "Anime";
+    ViewData["Title"] = Model.Key.Title;
+    int i = 1;
 }
 
 <style>
     ul {
         list-style-type: none;
         padding: 0;
-    }
-
-    li {
-        margin: 0 10px;
     }
 
     .text-light {
@@ -75,9 +72,9 @@
                 <h5 class="ml-4 text-white-50">No episodes uploaded yet...</h5>
             }
             else
-                for (int i = 1; i <= Model.Value.Count(); i++)
+                @foreach (var episode in Model.Value)
                 {
-                    <div class="episode-btn badge badge-secondary">
+                    <div onclick="location.href='@Url.Action("Watch", "Anime")?episodeId=@episode.Id&animeId=@Model.Key.Id'" class="episode-btn badge badge-secondary">
                         @if (i <= 9)
                         {
                             <span>0</span><span>@i</span>
@@ -87,6 +84,7 @@
                             <span>@i</span>
                         }
                     </div>
+                    i++;
                 }
         </div>
     </div>

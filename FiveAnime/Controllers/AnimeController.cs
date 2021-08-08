@@ -20,12 +20,26 @@ namespace FiveAnime.Controllers
         public IActionResult Anime(int id)
         {
             var animeToDisplay = businessLogic.FetchAllAnime().Where(x => x.Id == id).FirstOrDefault();
-            var animeEpisodes = businessLogic.AnimeEpisodes(animeToDisplay);
+            var animeEpisodes = businessLogic.AnimeEpisodes(animeToDisplay.Id);
 
             var currentAnimeAndEpisodes = new KeyValuePair<
                 Anime, List<Episode>>(
                 animeToDisplay, animeEpisodes);
 
+            return View(currentAnimeAndEpisodes);
+        }
+
+        public IActionResult Watch(int episodeId, int animeId)
+        {
+            var anime = businessLogic.FetchAllAnime().Where(x => x.Id == animeId).FirstOrDefault();
+            var allEpisodes = businessLogic.AnimeEpisodes(animeId);
+            int currentEpisode = allEpisodes.IndexOf(allEpisodes.Where(x => x.Id == episodeId).FirstOrDefault());
+            ViewBag.crEp = currentEpisode;
+
+            var currentAnimeAndEpisodes = new KeyValuePair<
+                Anime, List<Episode>>(
+                anime, allEpisodes
+                );
             return View(currentAnimeAndEpisodes);
         }
     }
