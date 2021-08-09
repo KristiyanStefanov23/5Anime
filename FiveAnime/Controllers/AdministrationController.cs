@@ -60,6 +60,7 @@ namespace FiveAnime.Controllers
 
             return RedirectToAction(nameof(HomeController.Index));
         }
+
         public IActionResult CreateEpisode()
         {
             ViewBag.AnimeList = businessLogic.GetAllAnimesKVP();
@@ -103,10 +104,54 @@ namespace FiveAnime.Controllers
 
         #region ManageOperation
 
-        public IActionResult Manage()
+        public IActionResult ManageAnime()
         {
-            return View();
+            var animeList = businessLogic.FetchAllAnime();
+
+            return View(animeList);
         }
+
+        public IActionResult DeleteAnime(int id)
+        {
+            var anime = businessLogic.FetchAllAnime().Where(x => x.Id == id).FirstOrDefault();
+
+            return View(anime);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteAnimeConfirm(int id)
+        {
+            var animeToDelete = businessLogic.FetchAllAnime().Where(x => x.Id == id).FirstOrDefault();
+            businessLogic.DeleteAnime(animeToDelete);
+
+            return RedirectToAction(nameof(HomeController.Index));
+        }
+
+        #region Episode
+
+        public IActionResult ManageEpisode(int id)
+        {
+            var episodeList = businessLogic.AnimeEpisodes(id);
+
+            return View(episodeList);
+        }
+
+        public IActionResult DeleteEpisode(int id)
+        {
+            var episode = businessLogic.AnimeEpisodes(id);
+
+            return View(episode);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteEpisodeConfirm(int id)
+        {
+            var episodeToDelete = businessLogic.AnimeEpisodes(id).Where(x => x.Id == id).FirstOrDefault();
+            businessLogic.DeleteEpisode(episodeToDelete);
+
+            return RedirectToAction(nameof(HomeController.Index));
+        }
+        #endregion
 
         #endregion
     }

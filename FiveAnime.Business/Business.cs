@@ -17,9 +17,21 @@ namespace FiveAnime.Business
             dbContext.SaveChanges();
         }
 
+
+        public void DeleteAnime(Anime anime)
+        {
+            dbContext.Animes.Remove(anime);
+            dbContext.SaveChanges();
+        }
         public void UploadEpisode(Episode episode)
         {
             dbContext.Episodes.Add(episode);
+            dbContext.SaveChanges();
+        }
+
+        public void DeleteEpisode(Episode episode)
+        {
+            dbContext.Episodes.Remove(episode);
             dbContext.SaveChanges();
         }
 

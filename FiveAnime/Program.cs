@@ -22,7 +22,7 @@ namespace FiveAnime
                     webBuilder.UseStartup<Startup>()
                 .UseKestrel(options =>
                 {
-                    options.Limits.MaxRequestBodySize = long.MaxValue;
+                    options.Limits.MaxRequestBodySize = int.MaxValue;
                 }));
     }
 }

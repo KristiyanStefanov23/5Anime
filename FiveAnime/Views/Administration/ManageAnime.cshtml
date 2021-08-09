@@ -1,0 +1,87 @@
+﻿@model IEnumerable<FiveAnime.Data.Models.Anime>
+
+@{ 
+    var aspActionCreate = "Create" + Model.GetType().GetGenericArguments().Single().Name;
+}
+<style>
+    th, td {
+        color: #fff !important;
+    }
+</style>
+
+<p>
+    <a asp-action=@aspActionCreate>Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CoverImageUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Studio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Season)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCompleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDubbed)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <img style="width: 100%;" src="@item.CoverImageUrl" alt="Alternate Text" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Studio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Season)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCompleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDubbed)
+            </td>
+
+            <td>
+                <a asp-action="EditAnime" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="ManageEpisode" asp-route-id="@item.Id">Episodes</a> |
+                <a asp-action="DeleteAnime" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

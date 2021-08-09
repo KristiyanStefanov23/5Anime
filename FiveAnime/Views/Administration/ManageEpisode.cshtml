@@ -1,0 +1,53 @@
+﻿@model IEnumerable<FiveAnime.Data.Models.Episode>
+
+@{
+    var aspActionCreate = "Create" + Model.GetType().GetGenericArguments().Single().Name;
+    int episodeCount = 1;
+}
+
+<style>
+    th, td {
+        color: #fff !important;
+    }
+</style>
+
+<p>
+    <a asp-action=@aspActionCreate>Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Episode:
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublishDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EpisodeVideoUrl)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @episodeCount
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PublishDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EpisodeVideoUrl)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+            episodeCount++;
+        }
+    </tbody>
+</table>
