@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Http;
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
 
 namespace FiveAnime.Models
 {
@@ -14,5 +13,6 @@ namespace FiveAnime.Models
         public DateTime PublishDate { get; set; }
         [Required]
         public IFormFile EpisodeVideo { get; set; }
+        public int EpisodeNumber { get; set; }
     }
 }

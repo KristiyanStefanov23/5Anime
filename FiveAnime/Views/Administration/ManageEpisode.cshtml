@@ -5,12 +5,6 @@
     int episodeCount = 1;
 }
 
-<style>
-    th, td {
-        color: #fff !important;
-    }
-</style>
-
 <p>
     <a asp-action=@aspActionCreate>Create New</a>
 </p>
@@ -22,9 +16,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.PublishDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EpisodeVideoUrl)
             </th>
             <th></th>
         </tr>
@@ -40,11 +31,8 @@
                     @Html.DisplayFor(modelItem => item.PublishDate)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.EpisodeVideoUrl)
-                </td>
-                <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="DeleteEpisode" asp-route-epId="@item.Id" asp-route-anId="@item.AnimeId">Delete</a>
                 </td>
             </tr>
             episodeCount++;

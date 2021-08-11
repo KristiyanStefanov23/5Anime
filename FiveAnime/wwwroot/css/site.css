@@ -28,10 +28,13 @@ body.bg-color, nav.bg-color  {
   border-color: #1861ac;
 }
 
+th, td {
+    color: #fff !important;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 @media (min-width: 768px) {
   html {

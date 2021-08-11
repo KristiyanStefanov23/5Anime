@@ -1,12 +1,9 @@
-﻿using FiveAnime.Models;
-using Microsoft.AspNetCore.Identity;
+﻿using FiveAnime.Data.Models;
+using FiveAnime.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FiveAnime.Controllers
 {
@@ -24,8 +21,11 @@ namespace FiveAnime.Controllers
         public IActionResult Index()
         {
             var animeList = businessLogic.FetchAllAnime();
+            var episodeList = businessLogic.FetchAllEpisode();
 
-            return View(animeList);
+            var animeAndEpisodeKVP = new KeyValuePair<List<Anime>, List<Episode>>(animeList, episodeList);
+
+            return View(animeAndEpisodeKVP);
         }
 
         public IActionResult Privacy()

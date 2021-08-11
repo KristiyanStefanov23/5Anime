@@ -19,22 +19,11 @@ namespace FiveAnime.Controllers
             this.cloudinaryService = cloudinaryService;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult OperationList()
-        {
-            return View();
-        }
+        public IActionResult Index() => View();
 
         #region CreateOperation
 
-        public IActionResult CreateAnime()
-        {
-            return View();
-        }
+        public IActionResult CreateAnime() => View();
 
         [HttpPost]
         public IActionResult CreateAnime(AnimeModel anime)
@@ -75,12 +64,14 @@ namespace FiveAnime.Controllers
             if (!ModelState.IsValid) return View(episode);
 
             var videoUrl = cloudinaryService.Video(episode.EpisodeVideo, "AnimeVideos");
+            var episodeNum = businessLogic.AnimeEpisodes(episode.AnimeId).Count() + 1;
             var videoToUpload = new Episode()
             {
                 EpisodeVideoUrl = videoUrl,
                 FromAnime = businessLogic.FetchAllAnime().Where(x => x.Id == episode.AnimeId).FirstOrDefault(),
                 AnimeId = episode.AnimeId,
-                PublishDate = System.DateTime.UtcNow
+                PublishDate = System.DateTime.UtcNow,
+                EpisodeNumber = episodeNum++
             };
             businessLogic.UploadEpisode(videoToUpload);
 
@@ -93,9 +84,11 @@ namespace FiveAnime.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateFilter(FilterModel filter)
+        public IActionResult CreateFilter(Filter filter)
         {
             if (!ModelState.IsValid) return View(filter);
+
+            businessLogic.UploadFilter(filter);
 
             return RedirectToAction(nameof(HomeController.Index));
         }
@@ -136,21 +129,23 @@ namespace FiveAnime.Controllers
             return View(episodeList);
         }
 
-        public IActionResult DeleteEpisode(int id)
+        public IActionResult DeleteEpisode(int epId, int anId)
         {
-            var episode = businessLogic.AnimeEpisodes(id);
+            var episodeToDelete = businessLogic.AnimeEpisodes(anId).Where(x => x.Id == epId).FirstOrDefault();
 
-            return View(episode);
+            return View(episodeToDelete);
         }
 
         [HttpPost]
-        public IActionResult DeleteEpisodeConfirm(int id)
+        public IActionResult DeleteEpisodeConfirm(int id, int animeId)
         {
-            var episodeToDelete = businessLogic.AnimeEpisodes(id).Where(x => x.Id == id).FirstOrDefault();
+            var episodeToDelete = businessLogic.AnimeEpisodes(animeId).Where(x => x.Id == id).FirstOrDefault();
             businessLogic.DeleteEpisode(episodeToDelete);
 
             return RedirectToAction(nameof(HomeController.Index));
         }
+
+        public IActionResult ManageFilter() => View(businessLogic.FetchAllFilters());
         #endregion
 
         #endregion

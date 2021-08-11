@@ -4,8 +4,8 @@
 
 @{
     ViewData["Title"] = "Watch";
-    int currentEpisodeCount = @ViewBag.crEp + 1;
-    int i = 1;
+    var currentEpisode = int.Parse(ViewBag.crEp.ToString()) + 1;
+
 }
 
 <style>
@@ -31,7 +31,7 @@
     }
 </style>
 
-<p>@Model.Key.Title > Episode @currentEpisodeCount</p>
+<p>@Model.Key.Title > Episode @currentEpisode</p>
 
 <video style="width: 100%;" class="mb-3" controls>
     <source src="@Model.Value[ViewBag.crEp].EpisodeVideoUrl" type="video/mp4" />
@@ -42,16 +42,15 @@
         @foreach (var episode in Model.Value)
         {
             <div onclick="location.href='@Url.Action("Watch", "Anime")?episodeId=@episode.Id&animeId=@Model.Key.Id'" class="episode-btn badge badge-secondary">
-                @if (i <= 9)
+                @if (episode.EpisodeNumber <= 9)
                 {
-                    <span>0</span><span>@i</span>
+                    <span>0</span><span>@episode.EpisodeNumber</span>
                 }
                 else
                 {
-                    <span>@i</span>
+                    <span>@episode.EpisodeNumber</span>
                 }
             </div>
-            i++;
         }
     </div>
 </div>

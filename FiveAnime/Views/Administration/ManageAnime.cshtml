@@ -37,10 +37,10 @@
                 @Html.DisplayNameFor(model => model.Year)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsCompleted)
+                Status
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsDubbed)
+                Language
             </th>
             <th></th>
         </tr>
@@ -48,7 +48,7 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td width="10%">
                 <img style="width: 100%;" src="@item.CoverImageUrl" alt="Alternate Text" />
             </td>
             <td>
@@ -70,14 +70,25 @@
                 @Html.DisplayFor(modelItem => item.Year)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsCompleted)
+                @if (item.IsCompleted)
+                {
+                    <span>Completed</span>
+                }else
+                {
+                    <span>Airing</span>
+                }
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsDubbed)
+                @if (!item.IsDubbed)
+                {
+                    <span>Dubbed</span>
+                }else
+                {
+                    <span>Subbed</span>
+                }
             </td>
 
             <td>
-                <a asp-action="EditAnime" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="ManageEpisode" asp-route-id="@item.Id">Episodes</a> |
                 <a asp-action="DeleteAnime" asp-route-id="@item.Id">Delete</a>
             </td>
