@@ -120,6 +120,22 @@ namespace FiveAnime.Controllers
             return RedirectToAction(nameof(HomeController.Index));
         }
 
+        public IActionResult DeleteFilter(int id)
+        {
+            var filterToRemove = businessLogic.FetchAllFilters().Where(x => x.Id == id).FirstOrDefault();
+
+            return View(filterToRemove);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteFilterConfirm(int id)
+        {
+            var filterToDelete = businessLogic.FetchAllFilters().Where(x => x.Id == id).FirstOrDefault();
+            businessLogic.DeleteFilter(filterToDelete);
+
+            return RedirectToAction(nameof(HomeController.Index));
+        }
+
         #region Episode
 
         public IActionResult ManageEpisode(int id)
@@ -146,6 +162,7 @@ namespace FiveAnime.Controllers
         }
 
         public IActionResult ManageFilter() => View(businessLogic.FetchAllFilters());
+
         #endregion
 
         #endregion

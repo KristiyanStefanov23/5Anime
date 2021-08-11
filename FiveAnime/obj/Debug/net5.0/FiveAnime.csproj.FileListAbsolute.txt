@@ -731,12 +731,6 @@ D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\FiveAnime.Views.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\FiveAnime.Views.pdb
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\CloudinaryDotNet.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Humanizer.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Mvc.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Razor.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Helpers.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
@@ -780,7 +774,6 @@ D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.VisualStudio.
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Composition.AttributedModel.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Composition.Convention.dll
@@ -908,3 +901,4 @@ D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administrat
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\ManageEpisode.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\ManageFilter.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\DeleteEpisode.cshtml.g.cs
+D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Administration\DeleteFilter.cshtml.g.cs

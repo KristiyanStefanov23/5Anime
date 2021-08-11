@@ -13,15 +13,16 @@
         </tr>
     </thead>
     <tbody accesskey="">
-@foreach (var item in Model) {
-        <tr class="flex-row justify-content-between">
-            <td>
-                @Html.DisplayFor(modelItem => item.FilterName)
-            </td>
-            <td>
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr class="flex-row justify-content-between">
+                <td>
+                    @Html.DisplayFor(modelItem => item.FilterName)
+                </td>
+                <td>
+                    <a asp-action="DeleteFilter" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

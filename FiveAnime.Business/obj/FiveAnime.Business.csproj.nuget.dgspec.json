@@ -47,10 +47,6 @@
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.15.2, )"
-            },
-            "Microsoft.AspNet.Mvc": {
-              "target": "Package",
-              "version": "[5.2.7, )"
             }
           },
           "imports": [

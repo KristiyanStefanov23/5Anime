@@ -42,5 +42,6 @@ namespace FiveAnime.Models
         public bool IsCompleted { get; set; }
         [Required]
         public bool IsDubbed { get; set; }
+        public List<Filter> filters { get; set; }
     }
 }
