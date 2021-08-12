@@ -2,7 +2,15 @@
 
 @{
     ViewData["Title"] = "Create Anime";
+
+    IEnumerable<SelectListItem> selectListItems = ViewBag.filterSelectList;
 }
+
+<style>
+    .multiSelect {
+        width: 100%
+    }
+</style>
 
 <h1>Create Anime</h1>
 
@@ -48,11 +56,16 @@
                 <span asp-validation-for="Season" class="text-danger"></span>
             </div>
 
-            @*<div class="form-group">
-                <label asp-for="Filters" class="control-label"></label>
-                @Html.DropDownListFor(model => model.)
-                <span asp-validation-for="Filters" class="text-danger"></span>
-            </div>*@
+            <div class="form-group">
+                <label asp-for="FilterIds" class="control-label"></label>
+                <select class="multiSelect" asp-for="FilterIds" multiple>
+                @foreach (var filter in selectListItems)
+                {
+                    <option value="@filter.Value">@filter.Text</option>
+                }
+                </select>
+                <span asp-validation-for="FilterIds" class="text-danger"></span>
+            </div>
 
             <div class="form-group">
                 <label asp-for="Year" class="control-label"></label>

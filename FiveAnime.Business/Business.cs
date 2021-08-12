@@ -11,10 +11,12 @@ namespace FiveAnime.Business
 
         public Business(ApplicationDbContext dbContext) => this.dbContext = dbContext;
 
-        public void UploadAnime(Anime anime)
+        public int UploadAnime(Anime anime)
         {
             dbContext.Animes.Add(anime);
             dbContext.SaveChanges();
+
+            return anime.Id;
         }
         public void DeleteAnime(Anime anime)
         {
@@ -41,6 +43,16 @@ namespace FiveAnime.Business
             dbContext.Filters.Remove(filter);
             dbContext.SaveChanges();
         }
+        public void AddFilterToAnime(int filterId, int animeId)
+        {
+            var filterAnimeRelation = new AnimeFilters() { 
+                AnimeId = animeId,
+                FilterId = filterId
+            };
+            dbContext.AnimeFilters.Add(filterAnimeRelation);
+            dbContext.SaveChanges();
+        }
+
         public List<KeyValuePair<int, string>> GetAllAnimesKVP() {
             var anime = new List<KeyValuePair<int, string>>();
             foreach (var animeFromDb in dbContext.Animes.OrderBy(x => x.Id))
@@ -56,6 +68,18 @@ namespace FiveAnime.Business
         public List<Episode> FetchAllEpisode() => dbContext.Episodes.OrderBy(x => x.AnimeId).ToList();
         public List<Filter> FetchAllFilters() => dbContext.Filters.OrderBy(x => x.FilterName).ToList();
 
+        public List<KeyValuePair<int, string>> AnimeFilters(int animeId) 
+        {
+            var filterList = dbContext.AnimeFilters.Where(x => x.AnimeId == animeId).Select(x => x.Filter).ToList();
+            var filtersKVP = new List<KeyValuePair<int, string>>();
+
+            foreach (var filters in filterList)
+            {
+                filtersKVP.Add(new KeyValuePair<int, string>(filters.Id, filters.FilterName));
+            }
+
+            return filtersKVP;
+        }
         public List<Episode> AnimeEpisodes(int animeId) => dbContext.Episodes.Where(x => x.FromAnime.Id == animeId).ToList();
     }
 }

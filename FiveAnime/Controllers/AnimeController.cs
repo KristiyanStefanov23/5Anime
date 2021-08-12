@@ -22,6 +22,8 @@ namespace FiveAnime.Controllers
             var animeToDisplay = businessLogic.FetchAllAnime().Where(x => x.Id == id).FirstOrDefault();
             var animeEpisodes = businessLogic.AnimeEpisodes(animeToDisplay.Id);
 
+            ViewBag.Filters = businessLogic.AnimeFilters(id);
+
             var currentAnimeAndEpisodes = new KeyValuePair<
                 Anime, List<Episode>>(
                 animeToDisplay, animeEpisodes);

@@ -12,7 +12,11 @@
             <div id="@episode.Id" onclick="location.href='@Url.Action("Watch", "Anime")?episodeId=@episode.Id&animeId=@episode.AnimeId'" class="text-white-50 col-2 text-center">
                 <img style="width: 100%" src="@Model.Key.Where(x => x.Id == episode.AnimeId).FirstOrDefault().CoverImageUrl" />
                 <div class="text-break cut-text">@Model.Key.Where(x => x.Id == episode.AnimeId).FirstOrDefault().Title</div>
-                <div>@episode.EpisodeNumber</div>
+                <div>
+                    Episode
+                    @if (episode.EpisodeNumber <= 9)
+                    {<span>0</span>}<span>@episode.EpisodeNumber</span>
+                </div>
             </div>
         }
     </div>

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using FiveAnime.Business.CloudinaryData;
 using FiveAnime.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FiveAnime.Controllers
 {
@@ -23,11 +24,20 @@ namespace FiveAnime.Controllers
 
         #region CreateOperation
 
-        public IActionResult CreateAnime() => View();
+        public IActionResult CreateAnime()
+        {
+            var filterList = businessLogic.FetchAllFilters();
+            ViewBag.filterSelectList = filterList.Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.FilterName }).ToList();
+
+            return View();
+        }
 
         [HttpPost]
-        public IActionResult CreateAnime(AnimeModel anime)
+        public IActionResult CreateAnime([FromForm]AnimeModel anime)
         {
+            var filterList = businessLogic.FetchAllFilters();
+            ViewBag.filterSelectList = filterList.Select(x => new SelectListItem() { Value = x.Id.ToString(), Text = x.FilterName }).ToList();
+
             if (!ModelState.IsValid) return View(anime);
 
             var imageUrl = cloudinaryService.Image(anime.CoverImage, "AnimeCoverImages");
@@ -37,7 +47,6 @@ namespace FiveAnime.Controllers
                 Title = anime.Title,
                 Description = anime.Description,
                 Episodes = anime.Episodes,
-                Filters = anime.Filters,
                 Type = anime.Type,
                 Studio = anime.Studio,
                 Season = anime.Season,
@@ -45,7 +54,11 @@ namespace FiveAnime.Controllers
                 IsCompleted = anime.IsCompleted,
                 IsDubbed = anime.IsDubbed
             };
-            businessLogic.UploadAnime(animeToUpload);
+            var animeId = businessLogic.UploadAnime(animeToUpload);
+
+            if(anime.FilterIds != null)
+                foreach (var filterId in anime.FilterIds)
+                    businessLogic.AddFilterToAnime(filterId, animeId);
 
             return RedirectToAction(nameof(HomeController.Index));
         }
@@ -71,7 +84,7 @@ namespace FiveAnime.Controllers
                 FromAnime = businessLogic.FetchAllAnime().Where(x => x.Id == episode.AnimeId).FirstOrDefault(),
                 AnimeId = episode.AnimeId,
                 PublishDate = System.DateTime.UtcNow,
-                EpisodeNumber = episodeNum++
+                EpisodeNumber = episodeNum
             };
             businessLogic.UploadEpisode(videoToUpload);
 

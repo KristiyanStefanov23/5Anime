@@ -4,14 +4,16 @@ using FiveAnime.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FiveAnime.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210812150509_FiltersImplementedAgainAnd")]
+    partial class FiltersImplementedAgainAnd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,6 +52,9 @@ namespace FiveAnime.Data.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
+                    b.Property<string>("FiltersId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
 
@@ -82,21 +87,6 @@ namespace FiveAnime.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Animes");
-                });
-
-            modelBuilder.Entity("FiveAnime.Data.Models.AnimeFilters", b =>
-                {
-                    b.Property<int>("FilterId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AnimeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("FilterId", "AnimeId");
-
-                    b.HasIndex("AnimeId");
-
-                    b.ToTable("AnimeFilters");
                 });
 
             modelBuilder.Entity("FiveAnime.Data.Models.Episode", b =>
@@ -356,25 +346,6 @@ namespace FiveAnime.Data.Migrations
                         .HasForeignKey("FiltersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("FiveAnime.Data.Models.AnimeFilters", b =>
-                {
-                    b.HasOne("FiveAnime.Data.Models.Anime", "Anime")
-                        .WithMany()
-                        .HasForeignKey("AnimeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("FiveAnime.Data.Models.Filter", "Filter")
-                        .WithMany()
-                        .HasForeignKey("FilterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Anime");
-
-                    b.Navigation("Filter");
                 });
 
             modelBuilder.Entity("FiveAnime.Data.Models.Episode", b =>

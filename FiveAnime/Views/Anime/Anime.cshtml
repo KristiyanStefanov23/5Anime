@@ -6,6 +6,7 @@
 @{
     ViewData["Title"] = Model.Key.Title;
     int i = 1;
+    var filterList = ViewBag.Filters;
 }
 
 <style>
@@ -28,6 +29,17 @@
         padding: 7px;
         background: #221f1f;
         color: #747474;
+    }
+
+    .filters-row {
+        width: 100%;
+    }
+    
+    .filters-row a{
+        margin: 0 3%;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.1rem;
     }
 </style>
 
@@ -63,7 +75,12 @@
     </div>
     <div class="col">
         <h1 class="m-5">@Model.Key.Title</h1>
-        <h5>Filters</h5>
+        <div class="filters-row">
+            @foreach (var filter in filterList)
+            {
+                <a href="@filter.Key">@filter.Value</a>
+            }
+        </div>
         <hr class="bg-white" />
         <p class="text-white-50">@Model.Key.Description</p>
         <div>

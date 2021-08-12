@@ -20,6 +20,8 @@ namespace FiveAnime.Models
         [MinLength(5)]
         public string Description { get; set; }
 
+        public List<int> FilterIds { get; set; }
+
         public ICollection<Episode> Episodes { get; set; }
 
         public ICollection<Filter> Filters { get; set; }
@@ -42,6 +44,5 @@ namespace FiveAnime.Models
         public bool IsCompleted { get; set; }
         [Required]
         public bool IsDubbed { get; set; }
-        public List<Filter> filters { get; set; }
     }
 }
