@@ -1,0 +1,64 @@
+﻿<style>
+    .search-wrapper {
+        border: 1px solid #808080;
+        border-radius: 5px;
+    }
+
+    .navbar-nav input[type=text] {
+        padding: 6px;
+        font-size: 17px;
+        border: none;
+        outline: none;
+        background: none;
+        color: #fff;
+    }
+
+    .navbar-nav .search-btn:hover {
+        background: #ccc;
+    }
+
+    .navbar-nav .search-btn {
+        color: #fff;
+        float: right;
+        padding: 6px 10px;
+        margin-right: 5px;
+        background: none;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<li class="nav-item">
+    <form asp-controller="Anime" asp-action="Search" method="post" autocomplete="off">
+        <div class="search-wrapper">
+            <input id="searchAnimeInput" list="searchAnime" type="text" placeholder="Search.." name="searchResult">
+            <datalist id="searchAnime"></datalist>
+            <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </form>
+</li>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#searchAnimeInput").on("input", function () {
+            console.log('fetch')
+            var options = {};
+            options.url = "/Search/Anime";
+            options.type = "GET";
+            options.data = { "criteria": $("#searchAnime").val() };
+            options.dataType = "json";
+            options.success = function (data) {
+                $("#searchAnime").empty();
+                for (var i = 0; i < data.length; i++) {
+                    $("#searchAnime").append("<option value='" +
+                        data[i] + "'></option>");
+                }
+            };
+            $.ajax(options);
+        });
+
+    });
+</script>

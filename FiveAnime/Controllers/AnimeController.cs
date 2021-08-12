@@ -44,5 +44,15 @@ namespace FiveAnime.Controllers
                 );
             return View(currentAnimeAndEpisodes);
         }
+
+        public IActionResult Search(string searchResult)
+        {
+            var searchResultKVP = new KeyValuePair<
+                string, List<Anime>>(
+                searchResult, businessLogic.FetchAllAnime().Where(x => x.Title.ToLower().StartsWith(searchResult.ToLower())).ToList()
+                );
+
+            return View(searchResultKVP);
+        }
     }
 }

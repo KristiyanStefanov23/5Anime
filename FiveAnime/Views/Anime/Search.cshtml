@@ -1,0 +1,21 @@
+﻿@using FiveAnime.Data.Models
+
+@model KeyValuePair<string, List<Anime>>
+
+<p>Search > @Model.Key</p>
+
+<div class="mt-5">
+    @foreach (var anime in Model.Value)
+    {
+        <div style="display: flex; align-items: center">
+            <img style="width: 5%" src="@anime.CoverImageUrl" />
+            <div class="ml-3">
+                <h5>@anime.Title</h5>
+                <p>
+                    @anime.Year / @anime.Season /
+                    @if (anime.IsCompleted){<span>Completed</span>}else{ <span>Airing</span>}
+                </p>
+            </div>
+        </div>
+    }
+</div>

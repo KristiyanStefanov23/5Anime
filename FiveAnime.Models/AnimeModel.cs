@@ -8,6 +8,7 @@ namespace FiveAnime.Models
 {
     public class AnimeModel
     {
+        public int Id { get; set; }
         [Required]
         public IFormFile CoverImage { get; set; }
         [Required]
