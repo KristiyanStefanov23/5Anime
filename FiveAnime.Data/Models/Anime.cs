@@ -14,7 +14,7 @@ namespace FiveAnime.Data.Models
         public string Title { get; set; }
 
         [Required]
-        [MaxLength(250)]
+        [MaxLength(1000)]
         [MinLength(5)]
         public string Description { get; set; }
 
@@ -22,10 +22,6 @@ namespace FiveAnime.Data.Models
 
         public ICollection<Filter> Filters { get; set; }
         //special pannel info
-        [Required]
-        [MaxLength(20)]
-        [MinLength(3)]
-        public string Type { get; set; }
         [Required]
         [MaxLength(20)]
         [MinLength(3)]

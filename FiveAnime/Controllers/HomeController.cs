@@ -2,8 +2,10 @@
 using FiveAnime.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using FiveAnime.Infrastructure;
 
 namespace FiveAnime.Controllers
 {
@@ -21,6 +23,7 @@ namespace FiveAnime.Controllers
         public IActionResult Index()
         {
             var animeList = businessLogic.FetchAllAnime();
+            animeList.Shuffle();
             var episodeList = businessLogic.FetchAllEpisode();
 
             var animeAndEpisodeKVP = new KeyValuePair<List<Anime>, List<Episode>>(animeList, episodeList);

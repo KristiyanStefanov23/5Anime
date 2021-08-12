@@ -47,7 +47,6 @@ namespace FiveAnime.Controllers
                 Title = anime.Title,
                 Description = anime.Description,
                 Episodes = anime.Episodes,
-                Type = anime.Type,
                 Studio = anime.Studio,
                 Season = anime.Season,
                 Year = anime.Year,

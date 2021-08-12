@@ -915,3 +915,4 @@ D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Dep
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

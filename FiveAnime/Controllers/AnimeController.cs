@@ -47,10 +47,10 @@ namespace FiveAnime.Controllers
 
         public IActionResult Search(string searchResult)
         {
+            if (string.IsNullOrEmpty(searchResult)) return RedirectToAction("Index", "Home");
             var searchResultKVP = new KeyValuePair<
                 string, List<Anime>>(
-                searchResult, businessLogic.FetchAllAnime().Where(x => x.Title.ToLower().StartsWith(searchResult.ToLower())).ToList()
-                );
+                searchResult, businessLogic.FetchAllAnime().Where(x => x.Title.ToLower().Contains(searchResult.ToLower())).ToList());
 
             return View(searchResultKVP);
         }
