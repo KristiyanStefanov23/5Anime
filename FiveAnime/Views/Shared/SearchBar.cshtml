@@ -53,8 +53,8 @@
             options.success = function (data) {
                 $("#searchAnime").empty();
                 for (var i = 0; i < data.length; i++) {
-                    $("#searchAnime").append("<option value='" +
-                        data[i] + "'></option>");
+                    $("#searchAnime").append(`<option value="` +
+                        data[i] + `"></option>`);
                 }
             };
             $.ajax(options);
