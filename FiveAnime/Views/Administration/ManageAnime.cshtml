@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<FiveAnime.Data.Models.Anime>
 
-@{ 
+@{
     var aspActionCreate = "Create" + Model.GetType().GetGenericArguments().Single().Name;
 }
 <style>
@@ -43,50 +43,56 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td width="10%">
-                <img style="width: 100%;" src="@item.CoverImageUrl" alt="Alternate Text" />
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Studio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Season)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Year)
-            </td>
-            <td>
-                @if (item.IsCompleted)
-                {
-                    <span>Completed</span>
-                }else
-                {
-                    <span>Airing</span>
-                }
-            </td>
-            <td>
-                @if (!item.IsDubbed)
-                {
-                    <span>Dubbed</span>
-                }else
-                {
-                    <span>Subbed</span>
-                }
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="10%">
+                    <img style="width: 100%;" src="@item.CoverImageUrl" alt="Alternate Text" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    <div style="max-height: 150px; overflow-y: scroll">
+                        @Html.DisplayFor(modelItem => item.Description)
 
-            <td>
-                <a asp-action="ManageEpisode" asp-route-id="@item.Id">Episodes</a> |
-                <a asp-action="DeleteAnime" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+                    </div>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Studio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Season)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @if (item.IsCompleted)
+                    {
+                        <span>Completed</span>
+                    }
+                    else
+                    {
+                        <span>Airing</span>
+                    }
+                </td>
+                <td>
+                    @if (!item.IsDubbed)
+                    {
+                        <span>Dubbed</span>
+                    }
+                    else
+                    {
+                        <span>Subbed</span>
+                    }
+                </td>
+
+                <td>
+                    <a asp-action="ManageEpisode" asp-route-id="@item.Id">Episodes</a>
+                    <a asp-action="DeleteAnime" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
