@@ -15,11 +15,5 @@ namespace FiveAnime.Controllers
             var query = businessLogic.FetchAllAnime().Select(x => x.Title);
             return Json(query.ToList());
         }
-
-        [HttpGet]
-        public IActionResult Filter()
-        {
-            return View();
-        }
     }
 }

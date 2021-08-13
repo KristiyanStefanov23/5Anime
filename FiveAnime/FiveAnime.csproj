@@ -22,10 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\UserSettings\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FiveAnime.Business\FiveAnime.Business.csproj" />
     <ProjectReference Include="..\FiveAnime.Data\FiveAnime.Data.csproj" />
     <ProjectReference Include="..\FiveAnime.Models\FiveAnime.Models.csproj" />

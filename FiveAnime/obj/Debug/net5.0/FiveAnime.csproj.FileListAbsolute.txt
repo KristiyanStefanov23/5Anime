@@ -905,7 +905,6 @@ D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Areas\Identity\Pa
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
-D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Discussion\Discussion.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Anime\Search.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Shared\SearchBar.cshtml.g.cs
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.Mvc.dll
@@ -916,3 +915,4 @@ D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.Raz
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\System.Web.WebPages.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 D:\Programming\Softuni\C#-Web\FiveAnime\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Programming\Softuni\C#-Web\FiveAnime\obj\Debug\net5.0\Razor\Views\Anime\Filter.cshtml.g.cs

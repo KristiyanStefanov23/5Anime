@@ -2,7 +2,7 @@
 
 @model KeyValuePair<string, List<Anime>>
 
-<p>Search > @Model.Key</p>
+<p>Filter > @Model.Key</p>
 
 <div class="mt-5">
     @foreach (var anime in Model.Value)
@@ -13,7 +13,10 @@
                 <h5>@anime.Title</h5>
                 <p>
                     @anime.Year / @anime.Season /
-                    @if (anime.IsCompleted){<span>Completed</span>}else{ <span>Airing</span>}
+                    @if (anime.IsCompleted)
+                    {<span>Completed</span>}
+                    else
+                    { <span>Airing</span>}
                 </p>
             </div>
         </div>

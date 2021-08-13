@@ -32,7 +32,7 @@
     }
 
     .filters-row a {
-        margin: 0 3%;
+        margin-right: 3%;
         color: #fff;
         font-weight: 600;
         font-size: 1.1rem;
@@ -76,7 +76,7 @@
         <div class="filters-row">
             @foreach (var filter in filterList)
             {
-                <a href="Search/@filter.Key">@filter.Value</a>
+                <a href="Filter/@filter.Key">@filter.Value</a>
             }
         </div>
         <hr class="bg-white" />

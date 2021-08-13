@@ -47,12 +47,34 @@ namespace FiveAnime.Controllers
 
         public IActionResult Search(string searchResult)
         {
-            if (string.IsNullOrEmpty(searchResult)) return RedirectToAction("Index", "Home");
-            var searchResultKVP = new KeyValuePair<
-                string, List<Anime>>(
-                searchResult, businessLogic.FetchAllAnime().Where(x => x.Title.ToLower().Contains(searchResult.ToLower())).ToList());
+            var searchResultKVP = new KeyValuePair<string, List<Anime>>();
+            if (string.IsNullOrEmpty(searchResult))
+                searchResultKVP = new KeyValuePair<
+                    string, List<Anime>>(
+                    "All Results", businessLogic.FetchAllAnime());
+            else
+                searchResultKVP = new KeyValuePair<
+                    string, List<Anime>>(
+                    searchResult, businessLogic.FetchAllAnime().Where(x => x.Title.ToLower().Contains(searchResult.ToLower())).ToList());
 
             return View(searchResultKVP);
+        }
+
+        public IActionResult Filter(int filterId)
+        {
+            var animeList = businessLogic.FetchAllAnime();
+            var filterName = businessLogic.FetchAllFilters().Where(x => x.Id == filterId).Select(x => x.FilterName).FirstOrDefault();
+            var newAnimeList = businessLogic.FetchAllAnime();
+
+            foreach (var anime in animeList)
+            {
+                var animeFilter = businessLogic.AnimeFilters(anime.Id);
+                if (!animeFilter.Any(x => x.Key == filterId))
+                    newAnimeList.Remove(anime);
+            }
+
+            var result = new KeyValuePair<string, List<Anime>>(filterName, newAnimeList);
+            return View(result);
         }
     }
 }
