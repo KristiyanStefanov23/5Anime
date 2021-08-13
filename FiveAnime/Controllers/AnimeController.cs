@@ -60,21 +60,17 @@ namespace FiveAnime.Controllers
             return View(searchResultKVP);
         }
 
-        public IActionResult Filter(int filterId)
+        public IActionResult Filter(int id)
         {
-            var animeList = businessLogic.FetchAllAnime();
-            var filterName = businessLogic.FetchAllFilters().Where(x => x.Id == filterId).Select(x => x.FilterName).FirstOrDefault();
-            var newAnimeList = businessLogic.FetchAllAnime();
+            var result = businessLogic.AnimeWithFilter(id);
+            var filterName = businessLogic.FetchAllFilters().Where(x => x.Id == id).FirstOrDefault().FilterName;
 
-            foreach (var anime in animeList)
-            {
-                var animeFilter = businessLogic.AnimeFilters(anime.Id);
-                if (!animeFilter.Any(x => x.Key == filterId))
-                    newAnimeList.Remove(anime);
-            }
 
-            var result = new KeyValuePair<string, List<Anime>>(filterName, newAnimeList);
-            return View(result);
+            var resultKVP = new KeyValuePair<string, List<Anime>>(
+                filterName, result
+                );
+
+            return View(resultKVP);
         }
     }
 }

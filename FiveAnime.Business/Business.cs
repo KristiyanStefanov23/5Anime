@@ -80,10 +80,16 @@ namespace FiveAnime.Business
 
             return filtersKVP;
         }
-        public List<Anime> AnimeWithFilter(int filterId)
+        public List<Anime> AnimeWithFilter(int id)
         {
+            var animeWithFilter = dbContext.AnimeFilters.Where(x => x.FilterId == id).Select(x => x.AnimeId).ToList();
+            var result = new List<Anime>();
+            foreach (var animeId in animeWithFilter)
+            {
+                result.Add(FetchAllAnime().Where(x => x.Id == animeId).FirstOrDefault());
+            }
 
-            return null;
+            return result;
         }
         public List<Episode> AnimeEpisodes(int animeId) => dbContext.Episodes.Where(x => x.FromAnime.Id == animeId).ToList();
     }
