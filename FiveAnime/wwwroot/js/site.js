@@ -7,6 +7,6 @@
 
 function GetLastFiveFromUrl() {
     let lastFive = window.location.href.substr(window.location.href.length - 5);
-    if (!lastFive === "Login") return false;
-    return true
+    if (lastFive === "Login") return true;
+    return false
 }
