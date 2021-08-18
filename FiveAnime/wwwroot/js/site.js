@@ -1,4 +1,12 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.body.onload = function () {
+    if (GetLastFiveFromUrl()) {
+        let partToRemove = document.querySelector('.col-md-6');
+        partToRemove.parentNode.removeChild(partToRemove);
+    }
+}
 
-// Write your JavaScript code.
+function GetLastFiveFromUrl() {
+    let lastFive = window.location.href.substr(window.location.href.length - 5);
+    if (!lastFive === "Login") return false;
+    return true
+}
